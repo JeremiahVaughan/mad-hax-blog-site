@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    padding:0;
+    margin:0;
+}
+
+#masthead {
+    background-color:#DDD;
+    padding:40px;
+}
