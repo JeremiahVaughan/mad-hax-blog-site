@@ -4,11 +4,18 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>My Blog</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>MAD-HAX Blog</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script async th:src="@{/js/NavMenu.js}"></script>
 </head>
 <body>
-<div th:replace="fragments/masthead.html :: masthead"></div>
-<p>Body text here.</p>
+<div id="container">
+    <div th:replace="fragments/Header.html :: header"></div>
+    <div id="main">
+        <h2>Welcome</h2>
+        <p>Body text here.</p>
+    </div><!-- END main -->
+    <div th:replace="fragments/Footer.html :: footer"></div>
+</div><!-- END container -->
 </body>
 </html>
