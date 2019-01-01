@@ -1,4 +1,4 @@
-package Model;
+package Domain;
 
 public class Profile {
     private String userName = "";
