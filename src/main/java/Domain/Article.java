@@ -1,20 +1,18 @@
 package Domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.ArrayList;
+import javax.persistence.*;
 
 @Entity
 public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long Id;
     private long publicationDate;
     private String title;
     private String body;
+    @ManyToOne
+    private Author author;
 
     // Empty constructor for convenience
     public Article() { }
@@ -28,7 +26,7 @@ public class Article {
     }
 
     public long getId() {
-        return id;
+        return Id;
     }
 
     public long getPublicationDate() {
