@@ -1,4 +1,4 @@
-package com.springdemo.blog;
+package com.madhax.blog;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
