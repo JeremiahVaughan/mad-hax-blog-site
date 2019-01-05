@@ -1,5 +1,7 @@
 package com.madhax.blog.domain;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,10 +11,13 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title;
+    @Type(type = "text")
     private String body;
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
+
+    public Article() { }
 
     public Article(String articleTitle, String articleBody, Author author) {
         this.title = articleTitle;
@@ -20,24 +25,28 @@ public class Article {
         this.author = author;
     }
 
-    public long getArticleId() {
+    public long getId() {
         return id;
     }
 
-    public String getArticleTitle() {
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
         return title;
     }
 
-    public void setArticleTitle(String articleTitle) {
-        this.title = articleTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getArticleBody() {
+    public String getBody() {
         return body;
     }
 
-    public void setArticleBody(String articleBody) {
-        this.body = articleBody;
+    public void setBody(String body) {
+        this.body = body;
     }
 
     public Author getAuthor() {

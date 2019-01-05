@@ -14,28 +14,34 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    public Author() { }
+
     public Author(String authorFirstName, String authorLastName) {
         this.firstName = authorFirstName;
         this.lastName = authorLastName;
     }
 
-    public long getAuthorId() {
+    public long getId() {
         return id;
     }
 
-    public String getAuthorFirstName() {
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setAuthorFirstName(String authorFirstName) {
-        this.firstName = authorFirstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getAuthorLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setAuthorLastName(String authorLastName) {
-        this.lastName = authorLastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

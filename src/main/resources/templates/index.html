@@ -6,14 +6,25 @@
     <meta charset="UTF-8">
     <title>MAD-HAX Blog</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/blog.css}" />
     <script async th:src="@{/js/NavMenu.js}"></script>
+    <script async th:src="@{/js/Blog.js}"></script>
 </head>
 <body>
 <div id="container">
     <div th:replace="fragments/Header.html :: header"></div>
     <div id="main">
         <h2>Welcome</h2>
-        <p>Body text here.</p>
+        <div class="article" th:each="article : ${articles}">
+            <div class="articleTitle" th:text="${article.getTitle()}"></div>
+            <div class="articleBody">
+                <i style="color:#AAA; margin-left:2em; font-size:.8em;">by <span th:text="${article.getAuthor().getFirstName() +
+                        ' ' + article.getAuthor().getLastName()}"></span></i>
+                <br />
+                <span th:text="${article.getBody()}"></span>
+            </div>
+        </div>
+        <div class="clr"></div>
     </div><!-- END main -->
     <div th:replace="fragments/Footer.html :: footer"></div>
 </div><!-- END container -->

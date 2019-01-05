@@ -31,15 +31,27 @@ public class BlogApplication {
             authorService.addAuthor(author);
             Article article1 = new Article(
                     "Article 1",
-                    "Article 1 body text",
+                    "Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora " +
+                            "torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, " +
+                            "urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis " +
+                            "turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus " +
+                            "consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.",
                     author);
             Article article2 = new Article(
                     "Article 2",
-                    "Article 2 body text",
+                    "Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora " +
+                            "torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, " +
+                            "urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis " +
+                            "turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus " +
+                            "consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.",
                     author);
             Article article3 = new Article(
                     "Article 3",
-                    "Article 3 body text",
+                    "Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora " +
+                            "torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, " +
+                            "urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis " +
+                            "turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus " +
+                            "consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.",
                     author);
             articleService.addArticle(article1);
             articleService.addArticle(article2);
