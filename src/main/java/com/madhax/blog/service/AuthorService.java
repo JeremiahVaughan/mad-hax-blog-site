@@ -11,15 +11,15 @@ import java.util.List;
 public class AuthorService {
 
     @Autowired
-    AuthorRespository authorRespository;
+    AuthorRepository authorRepository;
 
     public List<Author> getAllAuthors() {
         List<Author> authors = new ArrayList<>();
-        authorRespository.findAll().forEach(authors::add);
+        authorRepository.findAll().forEach(authors::add);
         return authors;
     }
 
     public void addAuthor(Author author) {
-        authorRespository.save(author);
+        authorRepository.save(author);
     }
 }

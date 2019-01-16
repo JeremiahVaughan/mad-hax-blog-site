@@ -3,7 +3,6 @@ package com.madhax.blog;
 import com.madhax.blog.domain.Article;
 import com.madhax.blog.domain.Author;
 import com.madhax.blog.service.ArticleService;
-import com.madhax.blog.service.AuthorRespository;
 import com.madhax.blog.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
